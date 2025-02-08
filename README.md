@@ -67,8 +67,11 @@ graph TD;
 
 Follow a structured framework. Above diagram shows this repository's approach. It helps structuring the test case development process as well as communicating the results.
 
--	**ML Steps:** A traditional ML pipeline includes data collection, data pre-processing, training, validation, deployment and monitoring steps.
+- **Tasks:** Classification, regression, generation, orchestration, etc.	
+- **ML Steps:** A traditional ML pipeline includes data collection, data pre-processing, training, validation, deployment and monitoring steps.
 -	**Components:** For each development stage, consider data, algorithm and interaction components.
+    - **Model:** Shallow models, deep models, agentic systems
+    - **Data:** See: <https://asabuncuoglu13.github.io/equitable-ai-cookbook/data-practices/data-taxonomy.html>
 -	**Assessment:** For each component of each step, select evaluation and mitigation techniques.
     - **Evaluation:** Define security, privacy and fairness metrics and apply evaluation techniques based on the selected metrics. 
     - **Potential harm analysis:** Follow a categorical harm analysis approach, based on AHA! and CSET-AIID harm taxonomies:
@@ -81,11 +84,20 @@ Follow a structured framework. Above diagram shows this repository's approach. I
     - **Mitigation:** Define tangible steps to increase security, privacy and fairness overall.
 - **Implications:** The implications can be specific steps to be taken or generalized perspectives to consider in future iterations of the development process. Whether specific or generalized, they should lead to developing some tangible steps. Categorize implications under four headlines: “Security and privacy,” “environment and sustainability,” “usability and inclusivity,” and “infrastructure and maintenance.” 
 
-
-
 ## Test Monitoring and Control
 
 Almost all ML-testing is compute heavy, which means it requires close monitoring to use the resources efficiently. 
+
+**Report Structure:**
+
+Based on model type and data availability, report structure changes. An example LLM-safety report includes:
+
+1. Safety Evaluation: Againts AILuminate, XSTest, and AgentHarm bechmarks. inspect_ai compatible.
+2. Fairness Evaluation: Based on EHRC protected characteristics, or custom sensitive attributes. Uses custom entity recognition for identifying subgroups. fairlearn compatible.
+3. Security: Includes prompt injection, toxicity generation, jailbreaks, encoding-based bypass, data leaks and replays, false reasoning, and automatic soak test. garak compatible.
+4. Robust: Against HallusionBench, and other confabulation benchmarks. inspect_ai compatible.
+5. Privacy Enhanced: Membership inference attack results.
+6. Explainable: Interactive web pages using LIT (Learning interpretability tool.) Selected examples of SHAP, LIME and Integrated Gradients results.
 
 ## Overall Management
 
