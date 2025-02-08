@@ -43,6 +43,46 @@ graph TD
 
 See the demo notebooks to understand the overall execution process.
 
+```mermaid
+graph TD;
+    A[Machine Learning System] --> B[Data Collection and Pre-Processing]
+    B --> C[Data]
+    B --> D[Algorithm]
+    B --> E[Interaction]
+
+    A --> F[Model Training and Evaluation]
+    A --> G[Deployment and Inference]
+
+    C --> H[Evaluation Techniques]
+    C --> I[Mitigation Techniques]
+
+    H --> J[Risk Analysis and Scoring]
+    I --> J
+
+    J --> K[Security and Privacy]
+    J --> L[Infrastructure and Maintenance]
+    J --> M[Environment and Sustainability]
+    J --> N[Usability and Inclusivity]
+```
+
+Follow a structured framework. Above diagram shows this repository's approach. It helps structuring the test case development process as well as communicating the results.
+
+-	**ML Steps:** A traditional ML pipeline includes data collection, data pre-processing, training, validation, deployment and monitoring steps.
+-	**Components:** For each development stage, consider data, algorithm and interaction components.
+-	**Assessment:** For each component of each step, select evaluation and mitigation techniques.
+    - **Evaluation:** Define security, privacy and fairness metrics and apply evaluation techniques based on the selected metrics. 
+    - **Potential harm analysis:** Follow a categorical harm analysis approach, based on AHA! and CSET-AIID harm taxonomies:
+        -	Quality of service harms
+        -	Representational harms
+        -	Legal and reputational harms
+        -	Social, societal, and well-being harms
+        -	Loss of rights or agency
+        -	Allocational harms
+    - **Mitigation:** Define tangible steps to increase security, privacy and fairness overall.
+- **Implications:** The implications can be specific steps to be taken or generalized perspectives to consider in future iterations of the development process. Whether specific or generalized, they should lead to developing some tangible steps. Categorize implications under four headlines: “Security and privacy,” “environment and sustainability,” “usability and inclusivity,” and “infrastructure and maintenance.” 
+
+
+
 ## Test Monitoring and Control
 
 Almost all ML-testing is compute heavy, which means it requires close monitoring to use the resources efficiently. 
