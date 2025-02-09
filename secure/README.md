@@ -12,3 +12,5 @@ MITRE recently introduced its ATLAS framework, which follows a TTP (tactics, tec
 
 
 See an example [use of MITRE ATLAS for a biometric ML model](./mitre-atlas-example.pdf). More detail: <https://doi.org/10.5281/zenodo.10409480>
+
+See AI Security code of practice: <https://www.gov.uk/government/publications/ai-cyber-security-code-of-practice/code-of-practice-for-the-cyber-security-of-ai>

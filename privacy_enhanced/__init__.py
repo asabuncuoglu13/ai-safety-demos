@@ -1,4 +1,4 @@
-from privacy.src.shadow_attack import (
+from src.shadow_attack import (
     prepare_attack_data,
     AttackModelBundle,
     ShadowModelBundle
