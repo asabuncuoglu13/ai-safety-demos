@@ -41,48 +41,52 @@ graph TD
 
 ## Test Case Execution
 
-See the demo notebooks to understand the overall execution process.
+See the demo notebooks to understand the overall execution process. Run 
+
 
 ```mermaid
 graph TD;
-    A[Machine Learning System] --> B[Data Collection and Pre-Processing]
-    B --> C[Data]
-    B --> D[Algorithm]
-    B --> E[Interaction]
+    direction TB
+    Start--> Tasks
+    Tasks --> Architecture
+    Architecture --> Input
+    Input  --> EvalComponents
+    EvalComponents --> Risks
 
-    A --> F[Model Training and Evaluation]
-    A --> G[Deployment and Inference]
+    subgraph Tasks[Identify tasks:]
+        T1[Classification]
+        T2[Regression]
+        T3[Generation]
+    end
+    
+    subgraph Architecture[Validate architecture:]
+        A1[Shallow ML Model]
+        A2[Deep ML Model]
+        A3[AI Orchestration / Agentic Systems]
+    end
 
-    C --> H[Evaluation Techniques]
-    C --> I[Mitigation Techniques]
+    subgraph Input[Validate input types:]
+        I1[Tabular]
+        I2[Text]
+        I3[Image]
+        I4[Multimodal]
+    end
 
-    H --> J[Risk Analysis and Scoring]
-    I --> J
+    subgraph EvalComponents["For each trustworthiness characteristic, evaluate components:"]
+        C1[Data]
+        C2[Algorithm]
+        C3[Interaction]
+    end
 
-    J --> K[Security and Privacy]
-    J --> L[Infrastructure and Maintenance]
-    J --> M[Environment and Sustainability]
-    J --> N[Usability and Inclusivity]
+    subgraph Risks[Update risk register:]
+        R1[Security and Privacy]
+        R2[Infrastructure and Maintenance]
+        R3[Environment and Sustainability]
+        R4[Usability and Inclusivity]
+    end
 ```
 
 Follow a structured framework. Above diagram shows this repository's approach. It helps structuring the test case development process as well as communicating the results.
-
-- **Tasks:** Classification, regression, generation, orchestration, etc.	
-- **ML Steps:** A traditional ML pipeline includes data collection, data pre-processing, training, validation, deployment and monitoring steps.
--	**Components:** For each development stage, consider data, algorithm and interaction components.
-    - **Model:** Shallow models, deep models, agentic systems
-    - **Data:** See: <https://asabuncuoglu13.github.io/equitable-ai-cookbook/data-practices/data-taxonomy.html>
--	**Assessment:** For each component of each step, select evaluation and mitigation techniques.
-    - **Evaluation:** Define security, privacy and fairness metrics and apply evaluation techniques based on the selected metrics. 
-    - **Potential harm analysis:** Follow a categorical harm analysis approach, based on AHA! and CSET-AIID harm taxonomies:
-        -	Quality of service harms
-        -	Representational harms
-        -	Legal and reputational harms
-        -	Social, societal, and well-being harms
-        -	Loss of rights or agency
-        -	Allocational harms
-    - **Mitigation:** Define tangible steps to increase security, privacy and fairness overall.
-- **Implications:** The implications can be specific steps to be taken or generalized perspectives to consider in future iterations of the development process. Whether specific or generalized, they should lead to developing some tangible steps. Categorize implications under four headlines: “Security and privacy,” “environment and sustainability,” “usability and inclusivity,” and “infrastructure and maintenance.” 
 
 ## Test Monitoring and Control
 
