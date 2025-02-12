@@ -43,7 +43,6 @@ graph TD
 
 See the demo notebooks to understand the overall execution process. Run 
 
-
 ```mermaid
 graph TD;
     direction TB
@@ -56,12 +55,14 @@ graph TD;
     subgraph Tasks[Identify tasks:]
         T1[Classification]
         T2[Regression]
-        T3[Generation]
+        T3[Clustering]
+        T4[Generation]
+        T5[...]
     end
     
     subgraph Architecture[Validate architecture:]
-        A1[Shallow ML Model]
-        A2[Deep ML Model]
+        A1[Shallow ML Models]
+        A2[Deep ML Models]
         A3[AI Orchestration / Agentic Systems]
     end
 
@@ -70,6 +71,7 @@ graph TD;
         I2[Text]
         I3[Image]
         I4[Multimodal]
+        I5[...]
     end
 
     subgraph EvalComponents["For each trustworthiness characteristic, evaluate components:"]
@@ -83,6 +85,7 @@ graph TD;
         R2[Infrastructure and Maintenance]
         R3[Environment and Sustainability]
         R4[Usability and Inclusivity]
+        R5[...]
     end
 ```
 
@@ -106,3 +109,6 @@ Based on model type and data availability, report structure changes. An example 
 ## Overall Management
 
 Generation, execution, monitoring and control are only a few processes in a risk-based test management process. Test environment implementation and maintenance throughout this lifecycle, as well as communication of test results are other important stages in this process.
+
+
+> **Research Preview Disclaimer:** This repository contains code, data, and materials that are part of an ongoing project. Please note that the work is in a research preview stage and may produce incomplete or inconsistent results. Use at your own discretion, and feel free to contribute or report any issues.
