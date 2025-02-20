@@ -32,6 +32,8 @@ This audit plan provides a structured approach to evaluate the robustness, secur
   3. Compare outputs with a ground truth dataset (if available).
   4. Document findings.
 
+> Also, utilise tools like [comet-ml/opik](https://github.com/comet-ml/opik) to structure the experimentation process.
+
 ### **Step 1: Robustness Testing**
 **Objective:** Evaluate the model's resilience to adversarial prompts and perturbations.
 
